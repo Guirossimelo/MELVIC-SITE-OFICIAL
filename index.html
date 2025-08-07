@@ -19,6 +19,7 @@
         <img src="img/logo.png" alt="MELVIC" />
         <span>MELVIC</span>
       </div>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
       <ul class="menu">
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#sobre">Sobre</a></li>
@@ -34,7 +35,7 @@
   </section>
 
   <section class="produtos">
-    <h2 id="produtos" style="color: #99dff5; text-shadow: 1px 1px 8px rgba(0, 191, 255, 0.6);">
+    <h2 id="produtos" class="titulo-produtos">
       Produtos em Destaque
     </h2>
     <div class="cards-produtos">
@@ -123,15 +124,13 @@
   </section>
 
   <section class="sobre">
-    <h2 id="sobre" style="color: #ffffff; text-shadow: 1px 1px 8px rgba(0, 191, 255, 0.6);">
-      Sobre a MELVIC
-    </h2>
+    <h2 id="sobre">Sobre a MELVIC</h2>
     <p>Nossos produtos são cuidadosamente higienizados, testados e entregues em perfeitas condições, garantindo qualidade, confiança e preço acessível — todos com garantia oferecida pela MELVIC.</p>
   </section>
 
   <footer>
-    <div class="contato">
-      <h3 id="contato">Contato</h3>
+    <div class="contato" id="contato">
+      <h3>Contato</h3>
       <p>WhatsApp: <a href="https://wa.me/5516994605388" target="_blank">(16) 99460-5388</a></p>
       <p>Email: guirossidemeloofc@gmail.com</p>
       <div class="redes-sociais">
@@ -141,5 +140,14 @@
     </div>
     <p class="copy">© 2025 MELVIC. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- JS opcional para menu mobile -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
