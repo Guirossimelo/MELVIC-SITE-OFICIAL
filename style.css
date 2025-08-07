@@ -1,4 +1,6 @@
-/* Reset básico */
+/* ----------------------------
+   RESET BÁSICO
+----------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +25,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Navbar */
+/* ----------------------------
+   NAVBAR
+----------------------------- */
 .navbar {
   background-color: #1e1e1e;
   display: flex;
@@ -73,7 +77,9 @@ a:hover {
   box-shadow: 0 0 10px #f5f5f5;
 }
 
-/* Hero Section */
+/* ----------------------------
+   HERO SECTION
+----------------------------- */
 .hero {
   height: 100vh;
   background: linear-gradient(135deg, #000000, #2e2e2e);
@@ -83,7 +89,7 @@ a:hover {
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  margin-top: 60px; /* espaço para navbar fixa */
+  margin-top: 60px;
   color: #f5f5f5;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
@@ -122,7 +128,9 @@ a:hover {
   cursor: pointer;
 }
 
-/* Produtos Section */
+/* ----------------------------
+   PRODUTOS SECTION
+----------------------------- */
 .produtos {
   padding: 60px 40px;
   background-color: #1e1e1e;
@@ -133,11 +141,10 @@ a:hover {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.6rem;
   margin-bottom: 40px;
-  color: #f5f5f5;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
 
-/* Aqui vem o destaque SÓ no título quando id estiver ativo */
+/* Destaque ao clicar em âncora */
 .produtos h2:target,
 .sobre h2:target,
 footer .contato h3:target {
@@ -148,7 +155,7 @@ footer .contato h3:target {
   color: #121212;
 }
 
-/* Cards produtos */
+/* Cards */
 .cards-produtos {
   display: flex;
   flex-wrap: wrap;
@@ -185,7 +192,6 @@ footer .contato h3:target {
 
 .card-produto h3 {
   font-family: 'Montserrat', sans-serif;
-  color: #f5f5f5;
   margin-bottom: 10px;
 }
 
@@ -206,7 +212,6 @@ footer .contato h3:target {
   display: inline-block;
   box-shadow: 0 0 10px #f5f5f5aa;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
 }
 
 .btn-whatsapp:hover {
@@ -216,7 +221,9 @@ footer .contato h3:target {
   cursor: pointer;
 }
 
-/* Sobre Section */
+/* ----------------------------
+   SOBRE SECTION
+----------------------------- */
 .sobre {
   padding: 60px 40px;
   background-color: #121212;
@@ -227,7 +234,6 @@ footer .contato h3:target {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.4rem;
   margin-bottom: 20px;
-  color: #f5f5f5;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
 
@@ -238,7 +244,9 @@ footer .contato h3:target {
   margin: 0 auto;
 }
 
-/* Footer */
+/* ----------------------------
+   FOOTER
+----------------------------- */
 footer {
   background-color: #1e1e1e;
   color: #888888;
@@ -259,15 +267,6 @@ footer .contato h3 {
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
 
-/* Aqui o destaque para contato também */
-footer .contato h3:target {
-  animation: destaque 1.5s ease forwards;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 5px;
-  padding: 0 8px;
-  color: #121212;
-}
-
 footer .contato a {
   color: #f5f5f5;
   margin: 0 10px;
@@ -275,18 +274,14 @@ footer .contato a {
   transition: color 0.3s ease;
 }
 
-footer .contato a:hover {
+footer .contato a:hover,
+footer .redes-sociais a:hover {
   color: #bbbbbb;
 }
 
 footer .redes-sociais a {
   margin: 0 15px;
-  color: #f5f5f5;
   transition: color 0.3s ease;
-}
-
-footer .redes-sociais a:hover {
-  color: #bbbbbb;
 }
 
 .copy {
@@ -294,12 +289,104 @@ footer .redes-sociais a:hover {
   font-size: 0.8rem;
 }
 
-/* Animação de destaque */
+/* ----------------------------
+   ANIMAÇÃO DE DESTAQUE
+----------------------------- */
 @keyframes destaque {
   0% {
     background-color: rgba(255, 255, 255, 0.7);
   }
   100% {
     background-color: transparent;
+  }
+}
+
+/* ----------------------------
+   RESPONSIVIDADE
+----------------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .hero {
+    height: auto;
+    padding: 80px 20px 40px;
+    margin-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .produtos,
+  .sobre {
+    padding: 40px 20px;
+  }
+
+  .produtos h2,
+  .sobre h2 {
+    font-size: 2rem;
+  }
+
+  .cards-produtos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-produto {
+    width: 100%;
+  }
+
+  .sobre p {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  footer .contato a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  footer .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .copy {
+    font-size: 0.75rem;
   }
 }
